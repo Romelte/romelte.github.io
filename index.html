@@ -3,67 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Romel Arango</title>
+    <meta name="description" content="Portafolio y CV de Romel Arango - Desarrollador Fullstack. Experiencia en PHP, Laravel, Vue.js, Node.js, arquitectura web y servidores cloud.">
+    <meta name="author" content="Romel Arango">
+    <title>Romel Arango &bull; Desarrollador Fullstack</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="foto.jpg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body class="dark-mode">
+    <!-- Ambient Aurora Mesh Backgrounds -->
+    <div class="bg-ambient" aria-hidden="true">
+        <div class="ambient-orb ambient-orb-1"></div>
+        <div class="ambient-orb ambient-orb-2"></div>
+        <div class="ambient-orb ambient-orb-3"></div>
+    </div>
+
     <div class="container">
-        <header>
-            <img src="foto.jpg" alt="Foto de perfil" class="profile-img">
-            <h1>Romel Arango</h1>
-            <p class="text-h">Desarrollador Fullstack</p>
-            <p class="text-h">Correo: romelyalexa@gmail.com</p>
-            <button id="toggle-mode" aria-label="Cambiar modo">
-                <i class="fas fa-sun"></i>
-                <i class="fas fa-moon"></i>
-            </button>
-        </header>
-        
-        <section class="content">
-            <div class="two-column">
-                <div class="column">
-                    <h2>Experiencia</h2>
-                    <p><strong>-Desarrollador Web</strong> en Icono Virtual. (2023 - Presente)</p>
-                    <p>Gestión de equipos de desarrollo</p>
-                    <p>Desarrollo Backend y Frontend</p>
-                    <p>Manejo de servidores (Hostinger, Bananahosting, Inmotion)</p>
-                    <br>
-                    <p><strong>-Desarrollador Web</strong> en DNA Music. (Feb 2022 - Ago 2022)</p>
-                    <p>Administración y desarrollo con Moodle</p>
-                    <p>Desarrollo Backend y Frontend</p>
-                    <p>Administración de automatizaciones de API con Zapier y Hechas in house.</p>
-                    <br>
-                    <p><strong>-Desarrollador Web</strong> en Icono Virtual. (Feb 2020 - Feb 2022)</p>
-                    <p>Desarrollo Backend y Frontend</p>
+        <!-- Top Glass Navigation -->
+        <nav class="top-nav" aria-label="Navegación principal">
+            <div class="status-badge">
+                <span class="pulse-dot"></span>
+                <span>Open to Work &bull; Fullstack Dev</span>
+            </div>
+
+            <div class="nav-actions">
+                <button id="print-btn" class="btn btn-glass" aria-label="Imprimir o guardar PDF del CV" title="Imprimir / Exportar a PDF">
+                    <i class="fas fa-print"></i>
+                    <span>Imprimir CV</span>
+                </button>
+                <button id="toggle-mode" class="btn-icon" aria-label="Cambiar tema claro u oscuro" title="Cambiar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                    <i class="fas fa-sun" aria-hidden="true"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Bento Card -->
+        <header class="hero-card">
+            <div class="profile-avatar-wrap">
+                <div class="avatar-aurora" aria-hidden="true"></div>
+                <img src="foto.jpg" alt="Romel Arango" class="profile-img" width="160" height="160" loading="eager">
+            </div>
+
+            <div class="hero-info">
+                <div class="hero-badge-wrap">
+                    <span class="hero-role-badge">
+                        <i class="fas fa-sparkles"></i> Desarrollador Fullstack
+                    </span>
+                    <span class="hero-location-badge">
+                        <i class="fas fa-location-dot"></i> Colombia
+                    </span>
                 </div>
 
-                <div class="column">
-                    <h2>Educación</h2>
-                    <p><strong>Ing de Sistemas 6 Semestre</strong> en Universidad del Magdalena</p>
-                    <h2>Habilidades</h2>
-                    <ul>
-                        <li>HTML, CSS, JavaScript, PHP, MySQL</li>
-                        <li>Vue.js, Node.js, Laravel</li>
-                        <li>Git, GitHub, Linux</li>
-                    </ul>
-                </div>
-                <div class="column">
-                    <h2>Proyectos</h2>
-                    <ul>
-                        <li>Juego niños del viento Desarrollo Backend y logica de los juegos <a href="https://losninosdelviento.com/juegos/index.php" target="_blank" rel="noopener noreferrer">Ver Juego</a> </li>
-                    </ul>
+                <h1 class="hero-name">Romel Arango</h1>
+                <p class="hero-bio">
+                    Desarrollador Fullstack enfocado en crear experiencias digitales fluidas, escalables y con alto estándar estético. Especialista en arquitecturas Backend robustas, interfaces Frontend interactivas, integración de APIs y despliegue en entornos cloud.
+                </p>
+
+                <!-- Action & Social Links -->
+                <div class="hero-contact-row">
+                    <a href="mailto:romelyalexa@gmail.com" class="btn btn-primary" id="btn-email-link">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Contactar</span>
+                    </a>
+                    
+                    <button class="btn btn-glass copy-badge" id="copy-email-btn" data-email="romelyalexa@gmail.com" title="Copiar correo al portapapeles">
+                        <i class="far fa-copy"></i>
+                        <span>romelyalexa@gmail.com</span>
+                    </button>
+
+                    <a href="https://www.linkedin.com/in/romel-carlos-arango-daza-012765165/" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-social" title="Perfil de LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <a href="https://github.com/Romelte" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-social" title="Perfil de GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
                 </div>
             </div>
-        </section>
+        </header>
 
+        <!-- Main Bento Grid -->
+        <main class="main-grid">
+            <!-- Left Column: Experiencia Laboral -->
+            <section class="section-block experience-block" aria-labelledby="experience-title">
+                <div class="section-header">
+                    <div class="section-icon-box" aria-hidden="true">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div>
+                        <h2 id="experience-title" class="section-title">Experiencia Laboral</h2>
+                        <p class="section-subtitle">Trayectoria profesional en desarrollo de software</p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Icono Virtual (Presente) -->
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="job-title">Desarrollador Web</h3>
+                                <span class="job-date current">
+                                    <i class="fas fa-circle-dot"></i> 2023 - Presente
+                                </span>
+                            </div>
+                            <p class="company-name">Icono Virtual</p>
+                            <ul class="job-tasks">
+                                <li>Gestión y liderazgo técnico de equipos de desarrollo de software.</li>
+                                <li>Desarrollo integral Backend y Frontend en aplicaciones web de alto rendimiento.</li>
+                                <li>Administración, optimización y aprovisionamiento de infraestructura de servidores (Hostinger, Bananahosting, Inmotion).</li>
+                            </ul>
+                            <div class="job-tags">
+                                <span class="mini-tag">Liderazgo</span>
+                                <span class="mini-tag">Fullstack</span>
+                                <span class="mini-tag">Servidores</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- DNA Music -->
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="job-title">Desarrollador Web</h3>
+                                <span class="job-date">Feb 2022 - Ago 2022</span>
+                            </div>
+                            <p class="company-name">DNA Music</p>
+                            <ul class="job-tasks">
+                                <li>Administración, personalización y desarrollo modular para la plataforma Moodle.</li>
+                                <li>Desarrollo de funcionalidades Backend y Frontend centradas en la experiencia del usuario.</li>
+                                <li>Implementación y orquestación de automatizaciones de APIs mediante Zapier y soluciones a medida in-house.</li>
+                            </ul>
+                            <div class="job-tags">
+                                <span class="mini-tag">Moodle</span>
+                                <span class="mini-tag">APIs</span>
+                                <span class="mini-tag">Zapier</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Icono Virtual (Primer periodo) -->
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="job-title">Desarrollador Web</h3>
+                                <span class="job-date">Feb 2020 - Feb 2022</span>
+                            </div>
+                            <p class="company-name">Icono Virtual</p>
+                            <ul class="job-tasks">
+                                <li>Desarrollo Backend y Frontend para plataformas de comercio electrónico y portales interactivos.</li>
+                                <li>Consumo y diseño de servicios RESTful y optimización de bases de datos relacionales.</li>
+                            </ul>
+                            <div class="job-tags">
+                                <span class="mini-tag">PHP / JS</span>
+                                <span class="mini-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Right Column: Bento Widgets (Stats, Habilidades, Proyecto) -->
+            <div class="side-column">
+                <!-- Bento Widget 1: Stats & Impact -->
+                <div class="bento-stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">+4</span>
+                        <span class="stat-label">Años de Exp.</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">Full</span>
+                        <span class="stat-label">Stack Ready</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">Cloud</span>
+                        <span class="stat-label">Servidores</span>
+                    </div>
+                </div>
+
+                <!-- Bento Widget 2: Habilidades Técnicas -->
+                <section class="section-block" aria-labelledby="skills-title">
+                    <div class="section-header">
+                        <div class="section-icon-box" aria-hidden="true">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h2 id="skills-title" class="section-title">Habilidades Técnicas</h2>
+                            <p class="section-subtitle">Stack de tecnologías & herramientas</p>
+                        </div>
+                    </div>
+
+                    <div class="skills-container">
+                        <!-- Frontend -->
+                        <div class="skill-group">
+                            <h3 class="skill-category-title">
+                                <i class="fas fa-code"></i> Frontend
+                            </h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                                <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                                <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                                <span class="skill-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
+                            </div>
+                        </div>
+
+                        <!-- Backend & Bases de Datos -->
+                        <div class="skill-group">
+                            <h3 class="skill-category-title">
+                                <i class="fas fa-server"></i> Backend & Bases de Datos
+                            </h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
+                                <span class="skill-tag"><i class="fab fa-laravel"></i> Laravel</span>
+                                <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                                <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                            </div>
+                        </div>
+
+                        <!-- DevOps, Servidores & Herramientas -->
+                        <div class="skill-group">
+                            <h3 class="skill-category-title">
+                                <i class="fas fa-terminal"></i> DevOps & Servidores
+                            </h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                                <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                                <span class="skill-tag"><i class="fab fa-linux"></i> Linux</span>
+                                <span class="skill-tag"><i class="fas fa-network-wired"></i> Servidores Cloud</span>
+                                <span class="skill-tag"><i class="fas fa-bolt"></i> Zapier & APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bento Widget 3: Proyecto Destacado -->
+                <section class="section-block project-block" aria-labelledby="projects-title">
+                    <div class="section-header">
+                        <div class="section-icon-box" aria-hidden="true">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div>
+                            <h2 id="projects-title" class="section-title">Proyecto Destacado</h2>
+                            <p class="section-subtitle">Producción & Lógica de Software</p>
+                        </div>
+                    </div>
+
+                    <article class="project-card">
+                        <div class="project-header-row">
+                            <span class="project-badge">
+                                <i class="fas fa-cube"></i> Videojuego Web
+                            </span>
+                        </div>
+
+                        <h3 class="project-title">Juego Niños del Viento</h3>
+                        <p class="project-desc">
+                            Desarrollo Backend completo, arquitectura de datos y lógica interactiva de videojuegos educativos web.
+                        </p>
+                        
+                        <div class="project-stack">
+                            <span class="tech-pill">PHP</span>
+                            <span class="tech-pill">Backend Architecture</span>
+                            <span class="tech-pill">Game Logic</span>
+                            <span class="tech-pill">MySQL</span>
+                        </div>
+
+                        <a href="https://losninosdelviento.com/juegos/index.php" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="btn-project-link">
+                            <span>Jugar / Probar en Vivo</span>
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </article>
+                </section>
+            </div>
+        </main>
+
+        <!-- Aesthetic Footer -->
         <footer>
-            <h5>Hecho con ❤️ Romel Arango</h5>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/romel-carlos-arango-daza-012765165/" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn de Romel Arango" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Romelte" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub de Romel Arango" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:romelyalexa@gmail.com" class="footer-link" aria-label="Email de Romel Arango" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="footer-text">
+                Diseñado con <span class="heart-icon">✦</span> por <strong>Romel Arango</strong> &bull; Fullstack Developer
+            </p>
         </footer>
     </div>
 
+    <!-- Toast Notification for Copy Action -->
+    <div id="toast" class="toast" role="status" aria-live="polite">
+        <i class="fas fa-check-circle" style="color: #34d399;"></i>
+        <span>¡Correo copiado al portapapeles!</span>
+    </div>
+
+    <!-- Main Logic Script -->
     <script src="script.js"></script>
 </body>
 </html>
-
-
